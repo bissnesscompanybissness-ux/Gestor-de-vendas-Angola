@@ -1,0 +1,26 @@
+src/serviços/ mensagem.ts
+import { supabase } from "./supabase";
+
+// Registrar mensagem enviada pelo WhatsApp
+export async function registrarMensagem(comercianteId: number, texto: string, descricao: string) {
+  const { data, error } = await supabase.from("mensagens").insert([
+    { comerciante_id: comercianteId, mensagem: texto, descricao, status: "enviada" }
+  ]);
+  return { data, error };
+}
+
+// Listar mensagens de um comerciante
+export async function listarMensagens(comercianteId: number) {
+  const { data, error } = await supabase
+    .from("mensagens")
+    .select("*")
+    .eq("comerciante_id", comercianteId)
+    .order("criado_em", { ascending: false });
+  return { data, error };
+}
+
+// Mensagem e descrição do módulo de mensagens
+export const mensagemMensagens = {
+  mensagem: "Gestão de mensagens WhatsApp ativa",
+  descricao: "Permite registrar e consultar mensagens enviadas e recebidas, integradas ao Supabase."
+};
