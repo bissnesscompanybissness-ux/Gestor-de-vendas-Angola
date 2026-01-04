@@ -1,0 +1,7 @@
+src.￼site.//enter
+// Mensagem e descrição gerais do sistema
+export const mensagemSite = {
+  mensagem: "Gestor de Vendas Angola",
+  descricao: "Plataforma integrada para comerciantes: autenticação, faturas e mensagens via WhatsApp, com base segura no Supabase."
+};
+
