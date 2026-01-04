@@ -1,0 +1,18 @@
+import { supabase } from "./supabase";
+
+// Registrar nova fatura
+export async function registrarFatura(comercianteId: number, valor: number, descricao: string) {
+  const { data, error } = await supabase.from("faturas").insert([
+    { comerciante_id: comercianteId, valor, descricao, status: "pendente" }
+  ]);
+  return { data, error };
+}
+
+// Listar faturas de um comerciante
+export async function listarFaturas(comercianteId: number) {
+  const { data, error } = await supabase
+    .from("faturas")
+    .select("*")
+    .eq("comerciante_id", comercianteId);
+  return { data, error };
+}￼Enter
