@@ -1,0 +1,7 @@
+import { createClient } from "@supabase/supabase-js";
+
+// Substitui pelos dados do teu projeto Supabase
+const supabaseUrl = "https://SEU_PROJETO.supabase.co";
+const supabaseKey = "SUA_CHAVE_PUBLICA";
+
+export const supabase = createClient(supabaseUrl, supabaseKey);￼Enter
