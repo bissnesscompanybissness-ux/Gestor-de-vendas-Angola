@@ -18,3 +18,19 @@ View your app in AI Studio: https://ai.studio/apps/drive/1OAJEYIgYvS1U_O1HEueZYl
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+1️⃣ Abre Chrome mobile → github.com/[teu-repo]
+2️⃣ app.js → Editar → Cola FINAL do ficheiro:
+
+// Vendas Angels Universal (todos comerciantes inclusos)
+document.querySelector('h1').textContent='Gestão Vendas Angels';
+document.querySelector('#faturamento').textContent='310.000 AOA';
+document.querySelector('ul').innerHTML=`
+<li>Marketing Digital: 125.000 AOA</li>
+<li>Agro Luanda: 85.000 AOA</li>
+<li>Comércio Central: 60.000 AOA</li>
+<li>Offshore Serviços: 40.000 AOA</li>`;
+
+📝 "Commit changes" (verde fundo)
+✅ "Commit changes" 
+
