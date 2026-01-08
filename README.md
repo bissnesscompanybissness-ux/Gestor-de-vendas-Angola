@@ -34,3 +34,4 @@ document.querySelector('ul').innerHTML=`
 📝 "Commit changes" (verde fundo)
 ✅ "Commit changes" 
 
+feat(config): add Supabase environment variables for Netlify deploy
