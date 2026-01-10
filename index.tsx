@@ -1,31 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import { AppProvider } from './contexts/AppContext';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
+// Componente principal da aplicação
+function App() {
+  return (
+    <h1>Gestor de Vendas Angola</h1>
+  )
 }
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+// Monta a aplicação dentro do div#root do index.html
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <AppProvider>
-      <App />
-    </AppProvider>
+    <App />
   </React.StrictMode>
-);
-
-// Register service worker for PWA capabilities
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(registration => {
-        console.log('SW registered: ', registration);
-      })
-      .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
-}
+) 
