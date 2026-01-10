@@ -1,25 +1,24 @@
-const { createClient } = require('@supabase/supabase-js');
+const { createClient } = require('@supabase/supabase-js')
 
-exports.handler = async function () {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-  const { data, error } = await supabase
-    .from('invoices') // substitui pelo nome da tua tabela
-    .select('*')
-    .limit(1);
+const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-  if (error) {
+exports.handler = async function(event, context) {
+  try {
+    const { data, error } = await supabase.from('test_table').select('*').limit(1)
+
+    if (error) throw error
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: "Conexão com Supabase válida.", data })
+    }
+  } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ status: 'Erro de conexão', error }),
-    };
+      body: JSON.stringify({ message: "Erro na função check-supabase.", error: err.message })
+    }
   }
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ status: 'Conexão OK', data }),
-  };
-};
+}
