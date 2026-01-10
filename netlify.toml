@@ -1,22 +1,17 @@
-
 [build]
   command = "npm run build"
   publish = "dist"
+  functions = "netlify/functions"
 
 [functions]
-  directory = "netlify/functions"
+  node_bundler = "esbuild"
 
-[context.production.environment]
-  # Supabase
-  NEXT_PUBLIC_SUPABASE_URL = "https://your-project.supabase.co"
-  NEXT_PUBLIC_SUPABASE_ANON_KEY = "your-anon-key"
-  SUPABASE_SERVICE_ROLE_KEY = "your-service-role-key"
-
-  # AGT
-  AGT_ENDPOINT = "https://api.agt.gov.ao/endpoint"
-  AGT_API_SECRET = "your-secret"
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 3000
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/*"
+  to = "/index.html"
   status = 200
