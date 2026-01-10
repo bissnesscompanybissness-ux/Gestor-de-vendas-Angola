@@ -1,3 +1,4 @@
+
 [build]
   command = "npm run build"
   publish = "dist"
@@ -6,10 +7,16 @@
   directory = "netlify/functions"
 
 [context.production.environment]
+  # Supabase
   NEXT_PUBLIC_SUPABASE_URL = "https://your-project.supabase.co"
   NEXT_PUBLIC_SUPABASE_ANON_KEY = "your-anon-key"
+  SUPABASE_SERVICE_ROLE_KEY = "your-service-role-key"
+
+  # AGT
   AGT_ENDPOINT = "https://api.agt.gov.ao/endpoint"
   AGT_API_SECRET = "your-secret"
-  SUPABASE_URL = "https://your-project.supabase.co"
-  SUPABASE_ANON_KEY = "your-anon-key"
-  SUPABASE_SERVICE_ROLE_KEY = "your-service-role-key"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
