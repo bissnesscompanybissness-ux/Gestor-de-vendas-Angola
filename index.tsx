@@ -1,16 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
+import App from './App' // se já tiveres o App separado
 
-// Componente principal da aplicação
-function App() {
-  return (
-    <h1>Gestor de Vendas Angola</h1>
-  )
+const el = document.getElementById('root')
+if (!el) {
+  throw new Error('Elemento #root não encontrado no index.html')
 }
 
-// Monta a aplicação dentro do div#root do index.html
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(el).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-) 
+)
