@@ -1,21 +1,13 @@
-hereMIT License
+Gestor-de-vendas-Angola © 2026 Bissness
 
-Copyright (c) 2026 João Luís Marketing Digital IA Agroindústria e Serviços
+Todos os direitos reservados.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Este software é propriedade exclusiva do autor e não pode ser copiado,
+modificado, distribuído ou utilizado para fins comerciais sem autorização
+prévia e expressa por escrito.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+É permitido o uso apenas por clientes licenciados e autorizados pelo autor.
+Qualquer uso não autorizado será considerado violação de direitos autorais
+e sujeito às penalidades previstas na lei.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Para obter uma licença comercial ou autorização de uso, contacte o autor.
