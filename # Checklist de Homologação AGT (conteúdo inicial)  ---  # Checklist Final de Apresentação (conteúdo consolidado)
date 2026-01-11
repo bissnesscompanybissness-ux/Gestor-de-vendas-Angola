@@ -1,0 +1,69 @@
+# 📑 Homologação AGT — Gestor de Vendas Angola
+
+Este documento reúne todos os passos necessários para validação e homologação oficial junto da Administração Geral Tributária (AGT).
+
+---
+
+## ✅ Checklist de Homologação AGT
+
+### 1. Deploy e Ambiente
+- [ ] Validar deploy manual no Netlify/Vercel.
+- [ ] Confirmar variáveis de ambiente:
+  - NEXT_PUBLIC_SUPABASE_URL
+  - NEXT_PUBLIC_SUPABASE_ANON_KEY
+  - SUPABASE_SERVICE_ROLE_KEY
+- [ ] Testar funções `check-anon` e `check-supabase` no domínio ativo.
+- [ ] Garantir que não existem ficheiros duplicados (`vite.config.ts` removido).
+- [ ] Confirmar que `index.html` aponta corretamente para `/src/index.tsx`.
+
+### 2. Geração SAF-T AO
+- [ ] Testar módulo `src/utils/saftAO.ts` com dados reais.
+- [ ] Validar cabeçalho (empresa, NIF, versão, data).
+- [ ] Confirmar exportação de clientes, produtos e impostos.
+- [ ] Validar faturas com totais líquidos, impostos e brutos.
+- [ ] Gerar ficheiro XML e verificar conformidade com especificação AGT.
+
+### 3. Documentação
+- [ ] Manual do Utilizador (emissão de faturas, exportação SAF-T AO).
+- [ ] Manual Técnico (arquitetura, variáveis de ambiente, fluxo de deploy).
+- [ ] Guia de Troubleshooting (erros comuns e soluções).
+- [ ] Checklist AGT anexado ao repositório.
+
+---
+
+# ✅ Checklist Final de Apresentação
+
+Este checklist consolida todos os pontos concluídos e serve como guia final para submissão oficial à AGT.
+
+### 1. Deploy Validado
+- [x] Deploy manual confirmado no Netlify/Vercel.
+- [x] Variáveis de ambiente configuradas corretamente.
+- [x] Funções `check-anon` e `check-supabase` testadas no domínio ativo.
+- [x] Ficheiro duplicado `vite.config.ts` removido.
+- [x] `index.html` aponta corretamente para `/src/index.tsx`.
+
+### 2. Geração SAF-T AO
+- [x] Módulo `src/utils/saftAO.ts` implementado.
+- [x] Cabeçalho da empresa validado.
+- [x] Clientes, produtos e impostos exportados corretamente.
+- [x] Faturas geradas com totais líquidos, impostos e brutos.
+- [x] Ficheiro XML SAF-T AO validado conforme especificação AGT.
+
+### 3. Documentação
+- [x] Manual do Utilizador concluído.
+- [x] Manual Técnico concluído.
+- [x] Guia de Troubleshooting incluído.
+- [x] Checklist AGT anexado.
+- [x] Checklist final consolidado anexado.
+
+### 4. Testes Finais
+- [x] Acesso público ao domínio ativo confirmado.
+- [x] Sistema validado em ambiente mobile e desktop.
+- [x] Exportação SAF-T AO testada em diferentes períodos (mensal).
+- [x] Logs de deploy revisados sem erros críticos.
+- [x] Pacote final preparado para submissão.
+
+### 5. Submissão à AGT
+- [x] Documentação completa compilada.
+- [x] Ficheiro SAF-T AO de teste anexado.
+- [x] Pacote submetido para homologação oficial.￼Enter
