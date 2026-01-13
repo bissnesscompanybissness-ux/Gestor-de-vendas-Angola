@@ -2,6 +2,7 @@
   "name": "gestor-de-vendas-angola",
   "private": true,
   "version": "1.0.0",
+  "description": "Aplicação SaaS para gestão de vendas em Angola, com integração Supabase, relatórios fiscais SAF-T AO e suporte PWA.",
   "type": "module",
   "scripts": {
     "dev": "vite",
